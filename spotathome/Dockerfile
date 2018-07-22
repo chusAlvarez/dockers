@@ -16,9 +16,3 @@ USER root
 RUN make install
 USER dev
 WORKDIR /home/dev
-RUN ls
-RUN git clone https://github.com/chusAlvarez/spotathome.git spotathome
-WORKDIR /home/dev/spotathome
-RUN make clean
-RUN export LD_LIBRARY_PATH=/usr/local/lib && make test
-ENTRYPOINT /bin/bash
